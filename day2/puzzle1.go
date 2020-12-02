@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	// "bufio"
     "io/ioutil"
 	"log"
 	"strings"
