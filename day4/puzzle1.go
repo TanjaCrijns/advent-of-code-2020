@@ -14,10 +14,10 @@ func main() {
 
 	check_elements := []string{"byr:", "iyr:", "eyr:", "hgt:", "hcl:", "ecl:", "pid:"}
 	var count_passports int = 0
-	for _, key1 := range input {
+	for _, key := range input {
 		var check_count int = 0
 		for _, element := range check_elements {
-			if strings.Contains(string(key1), string(element)) {
+			if strings.Contains(string(key), string(element)) {
 				check_count++
 			}
 		}
