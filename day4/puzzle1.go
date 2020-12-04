@@ -22,7 +22,6 @@ func main() {
 			}
 		}
 		if check_count >= len(check_elements) {
-			fmt.Println(key1, "\n")
 			count_passports++
 		}
 	}
