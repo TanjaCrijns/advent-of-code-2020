@@ -64,7 +64,6 @@ func main() {
 			var checks_passed int = 0
 			for _, element := range check_elements {
 				for _, item := range split_content {
-
 					if element == "byr:" && strings.Contains(string(item), string(element)) {
 						value := strings.Split(item, ":")[1]
 						int_value, _ := strconv.Atoi(value)

@@ -1,5 +1,9 @@
 Day 1: Report Repair
 ---
+
+<details>
+  <summary>Puzzle explanation</summary>
+
 After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.
 
 The tropical island has its own currency and is entirely cash-only. The gold coins used there have a little picture of a starfish; the locals just call them stars. None of the currency exchanges seem to have heard of them, but somehow, you'll need to find fifty of these coins by the time you arrive so you can pay the deposit on your room.
@@ -38,3 +42,10 @@ In your expense report, what is the product of the three entries that sum to 202
 ```
 Your puzzle answer was 276432018.
 ```
+</details>
+
+
+<details>
+  <summary>Comments about solution</summary>
+  First time writing Golang, wasn't too bad! I feel like I was writing Python in Go however, hopefully I will write some more Go structured code in the future. Did not have a lot of time for the second puzzle, but my computer didn't crash after writing a triple for loop so I'm good.
+</details>

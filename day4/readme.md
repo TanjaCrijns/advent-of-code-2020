@@ -1,5 +1,8 @@
 Day 4: Passport Processing 
 ---
+
+<details>
+  <summary>Puzzle explanation</summary>
 You arrive at the airport only to realize that you grabbed your North Pole Credentials instead of your passport. While these documents are extremely similar, North Pole Credentials aren't issued by a country and therefore aren't actually valid documentation for travel in most of the world.
 
 It seems like you're not the only one having problems, though; a very long line has formed for the automatic passport scanners, and the delay could upset your travel itinerary.
@@ -118,3 +121,9 @@ Count the number of valid passports - those that have all required fields and va
 ```
 Your puzzle answer was 145.
 ```
+</details>
+
+<details>
+  <summary>Comments about solution</summary>
+    I think my solution to the first puzzle was quite okay. However, I think that they meant the second puzzle to be a regex excercise and I did not have enough time/mental perseverance to figure out how regexes in Golang so I made an if statement monstrosity. Mental note to figure out regexes in one of the next challenges, musn't be too hard.
+</details>
