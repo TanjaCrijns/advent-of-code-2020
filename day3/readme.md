@@ -3,6 +3,7 @@ Day 3: Toboggan Trajectory
 
 <details>
   <summary>Puzzle explanation</summary>
+<br/>
 With the toboggan login problems resolved, you set off toward the airport. While travel by toboggan might be easy, it's certainly not safe: there's very minimal steering and the area is covered in trees. You'll need to see which angles will take you near the fewest trees.
 
 Due to the local geology, trees in this area only grow on exact integer coordinates in a grid. You make a map (your puzzle input) of the open squares (.) and trees (#) you can see. For example:
@@ -83,5 +84,6 @@ Your puzzle answer was 1592662500.
 
 <details>
   <summary>Comments about solution</summary>
+  <br/>
     In Python I would've solved it with a 2-dimensional array, so I tried that in Go; bad idea. Was struggeling to define a 2d array as you cannot define one with variables, only constants. And the size of the input is a variable, however I thought it was ugly to hardcode it (not that I have a strict policy for that anyway). I worked my way around it and I learned more about the somewhat more low-level nature of Golang as compared to Python. Also, I'm starting to miss enhanced for loops.
 </details>
