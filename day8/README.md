@@ -89,3 +89,9 @@ Fix the program so that it terminates normally by changing exactly one jmp (to n
 Your puzzle answer was 846.
 ```
 </details>
+
+<details>
+  <summary>Comments about solution</summary>
+  <br/>
+  Got completely stuck on the second puzzle as I couldn't figure out how to properly copy an array. It eventually turned out to be quite straightforward. 
+  </details>
