@@ -46,8 +46,8 @@ func count_variants(adapters []int) int {
 	}
 	// Only one way way to arrange the end outlet, the difference is always three, which will try to get:
 	// variants[adapter-1] = 0 (doesn't exist)
-	// variants[adapter-3] = 0 (doesn't exist)
-	// variants[adapter-1] = last result, so we just return the last result:
+	// variants[adapter-2] = 0 (doesn't exist)
+	// variants[adapter-3] = last result, so we just return the last result:
 	return variants[adapters[len(adapters)-1]]
 }
 
