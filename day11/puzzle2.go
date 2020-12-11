@@ -51,17 +51,27 @@ func valid_position(i int, j int, len int, width int) bool {
 
 func get_n_neighbours(i int, j int, grid [][]string) int {
 	var neighbour_count int
-	var coord_list = []int{-1, 0, +1}
+	var coord_list = []int{-1, 0, 1}
 	for _, coordx := range coord_list {
 		for _, coordy := range coord_list {
 			if coordx == 0 && coordy == 0 {
 				continue
 			} else {
-				if valid_position(i+coordx, j+coordy, len(grid), len(grid[0])) {
-					if grid[i+coordx][j+coordy] == "#" {
-						neighbour_count++
-
+				var chair_not_found = true
+				var index int = 1
+				for chair_not_found {
+					if valid_position(i+index*coordx, j+index*coordy, len(grid), len(grid[0])) {
+						if grid[i+index*coordx][j+index*coordy] == "#" {
+							neighbour_count++
+							chair_not_found = false
+						}
+						if grid[i+index*coordx][j+index*coordy] == "L" {
+							chair_not_found = false
+						}
+					} else {
+						chair_not_found = false
 					}
+					index++
 				}
 
 			}
@@ -98,7 +108,7 @@ func main() {
 					copy_grid[i][j] = "#"
 					change = true
 				}
-				if grid[i][j] == "#" && get_n_neighbours(i, j, grid) >= 4 {
+				if grid[i][j] == "#" && get_n_neighbours(i, j, grid) >= 5 {
 					copy_grid[i][j] = "L"
 					change = true
 				}
