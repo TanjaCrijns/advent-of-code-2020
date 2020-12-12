@@ -52,6 +52,7 @@ func valid_position(i int, j int, len int, width int) bool {
 func get_n_neighbours(i int, j int, grid [][]string) int {
 	var neighbour_count int
 	var coord_list = []int{-1, 0, +1}
+
 	for _, coordx := range coord_list {
 		for _, coordy := range coord_list {
 			if coordx == 0 && coordy == 0 {
@@ -60,7 +61,6 @@ func get_n_neighbours(i int, j int, grid [][]string) int {
 				if valid_position(i+coordx, j+coordy, len(grid), len(grid[0])) {
 					if grid[i+coordx][j+coordy] == "#" {
 						neighbour_count++
-
 					}
 				}
 
