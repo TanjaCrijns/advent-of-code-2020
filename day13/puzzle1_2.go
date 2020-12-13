@@ -14,25 +14,25 @@ func i_hate_go_modulo(x int, y int) int {
 	return x % y
 }
 
-// // greatest common divisor (GCD) via Euclidean algorithm
-// func GCD(a, b int) int {
-// 	for b != 0 {
-// 		t := b
-// 		b = a % b
-// 		a = t
-// 	}
-// 	return a
-// }
+// greatest common divisor (GCD) via Euclidean algorithm
+func GCD(a, b int) int {
+	for b != 0 {
+		t := b
+		b = a % b
+		a = t
+	}
+	return a
+}
 
-// func LCM(a, b int, integers ...int) int {
-// 	result := a * b / GCD(a, b)
+func LCM(a, b int, integers ...int) int {
+	result := a * b / GCD(a, b)
 
-// 	for i := 0; i < len(integers); i++ {
-// 		result = LCM(result, integers[i])
-// 	}
+	for i := 0; i < len(integers); i++ {
+		result = LCM(result, integers[i])
+	}
 
-// 	return result
-// }
+	return result
+}
 
 func puzzle1(departure_time int, bus_schedule []string) int {
 	var earliest_bus, time_earliest_bus int
@@ -57,10 +57,7 @@ func puzzle2(departure_time int, bus_schedule []string) int {
 			for i_hate_go_modulo((timestamp+i), bus_int) != 0 {
 				timestamp += step
 			}
-			// step = LCM(step, bus_int)
-			// Edit: I read that the numbers are all mutually prime, which means I don't even
-			// need to find the least common multiple
-			step *= bus_int
+			step = LCM(step, bus_int)
 		}
 	}
 	return timestamp
