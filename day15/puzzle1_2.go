@@ -16,10 +16,7 @@ func puzzle(input string, goal int) int {
 	}
 
 	for i := len(number_dict); i < goal; i++ {
-		if i == len(number_dict) {
-			number_dict[last_number] = i
-			last_number = 0
-		} else if val, ok := number_dict[last_number]; ok {
+		if val, ok := number_dict[last_number]; ok {
 			number_dict[last_number] = i
 			last_number = i - val
 		} else {
