@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"strings"
+	"time"
 )
 
 func i_hate_go_copy(input [][][]string, grid_size int) [][][]string {
@@ -121,6 +122,7 @@ func apply_cycles(grid [][][]string, n_cycles int, grid_size int) int {
 }
 
 func main() {
+	start := time.Now()
 	input, _ := ioutil.ReadFile("input.txt")
 	input_strings_list := strings.Split(string(input), "\n")
 	input_string := strings.Join(input_strings_list, "")
@@ -132,4 +134,6 @@ func main() {
 	grid := make_3d_grid(grid_size, input_string, input_width, input_heigth)
 
 	fmt.Println("The answer to puzzle 1 is: ", apply_cycles(grid, n_cycles, grid_size))
+	elapsed := time.Since(start)
+	fmt.Println("Time spent: ", elapsed)
 }
