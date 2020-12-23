@@ -1,6 +1,6 @@
 from tqdm import tqdm
 
-# Crab cups without linked lists
+# Crab cups with lists
 # def crab_cups(cup_list, n_moves):
 # 	current_cup_index = 0
 # 	cup_modulo = len(cup_list)
